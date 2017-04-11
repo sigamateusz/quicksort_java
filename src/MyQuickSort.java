@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class MyQuickSort {
 
-    private static ArrayList<Integer> QuickSort(ArrayList<Integer> toSort) {
+    private static ArrayList<Integer> quickSort(ArrayList<Integer> toSort) {
 
         if ( toSort.size() > 1 ) {
             Integer pivot = toSort.get(0);
@@ -21,9 +21,9 @@ public class MyQuickSort {
             }
 
             ArrayList<Integer> result = new ArrayList<>();
-            result.addAll(QuickSort(less));
+            result.addAll(quickSort(less));
             result.addAll(equal);
-            result.addAll(QuickSort(greater));
+            result.addAll(quickSort(greater));
 
             return result;
         }
@@ -40,7 +40,7 @@ public class MyQuickSort {
         x.add(11);
         x.add(11);
 
-        for (Object i: QuickSort(x)) {
+        for (Object i: quickSort(x)) {
             System.out.println(i);
         }
     }
