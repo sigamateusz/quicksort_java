@@ -33,9 +33,8 @@ public class MyQuickSort {
     public static void main (String[] args) {
         String filename = args[0];
         ArrayList<Integer> fromFile = FileOperations.readFromFile(filename);
+        ArrayList<Integer> sortedList = quickSort(fromFile);
 
-        for (Object i: quickSort(fromFile)) {
-            System.out.println(i);
-        }
+        FileOperations.writeToFile(sortedList, filename);
     }
 }

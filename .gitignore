@@ -43,3 +43,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 .gitignore
+/src/FileOperations.class
+/src/MyQuickSort.class
+*_sorted.txt
