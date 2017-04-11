@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
 
 public class MyQuickSort {
 
@@ -8,9 +6,9 @@ public class MyQuickSort {
 
         if ( toSort.size() > 1 ) {
             Integer pivot = toSort.get(0);
-            ArrayList<Integer> less = new ArrayList<Integer>();
-            ArrayList<Integer> equal = new ArrayList<Integer>();
-            ArrayList<Integer> greater = new ArrayList<Integer>();
+            ArrayList<Integer> less = new ArrayList<>();
+            ArrayList<Integer> equal = new ArrayList<>();
+            ArrayList<Integer> greater = new ArrayList<>();
 
             for (Integer number: toSort) {
                 if ( number < pivot ) {
@@ -22,7 +20,7 @@ public class MyQuickSort {
                 }
             }
 
-            ArrayList<Integer> result = new ArrayList<Integer>();
+            ArrayList<Integer> result = new ArrayList<>();
             result.addAll(QuickSort(less));
             result.addAll(equal);
             result.addAll(QuickSort(greater));
@@ -33,7 +31,7 @@ public class MyQuickSort {
     }
 
     public static void main (String[] args) {
-        ArrayList<Integer> x = new ArrayList<Integer>();
+        ArrayList<Integer> x = new ArrayList<>();
         x.add(5);
         x.add(2);
         x.add(3);
