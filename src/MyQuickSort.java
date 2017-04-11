@@ -33,13 +33,14 @@ public class MyQuickSort {
     public static void main (String[] args) {
         String filename = args[0];
         ArrayList<Integer> fromFile = FileOperations.readFromFile(filename);
-        long tStart = System.currentTimeMillis();
+        long tStart = System.nanoTime();
 
         ArrayList<Integer> sortedList = quickSort(fromFile);
 
-        long tEnd = System.currentTimeMillis();
+        long tEnd = System.nanoTime();
         long tDelta = tEnd - tStart;
-        double elapsedSeconds = tDelta / 1000.0;
+
+        double elapsedSeconds = tDelta / 1000000000.0;
 
         System.out.println("...:::" + elapsedSeconds + "sec:::...");
 
