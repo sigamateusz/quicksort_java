@@ -31,17 +31,10 @@ public class MyQuickSort {
     }
 
     public static void main (String[] args) {
-//        FileOperations.readFromFile();
-        ArrayList<Integer> x = new ArrayList<>();
-        x.add(5);
-        x.add(2);
-        x.add(3);
-        x.add(4);
-        x.add(15);
-        x.add(11);
-        x.add(11);
+        String filename = args[0];
+        ArrayList<Integer> fromFile = FileOperations.readFromFile(filename);
 
-        for (Object i: quickSort(x)) {
+        for (Object i: quickSort(fromFile)) {
             System.out.println(i);
         }
     }

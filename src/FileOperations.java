@@ -3,20 +3,21 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 
-public class FileOperations {
-    public static ArrayList<Integer> readFromFile(String filename) {
+class FileOperations {
 
+    static ArrayList<Integer> readFromFile(String filename) {
+
+        ArrayList<Integer> arrayFromFile = new ArrayList<>();
         try {
-            File x = new File(filename);
-            Scanner sc = new Scanner(x);
+            Scanner sc = new Scanner(new File(filename));
+
             while(sc.hasNext()) {
-                System.out.println(sc.next());
+                arrayFromFile.add(Integer.parseInt(sc.next()));
             }
             sc.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-        return new ArrayList<>();
+        return arrayFromFile;
     }
 }
