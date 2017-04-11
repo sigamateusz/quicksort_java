@@ -31,6 +31,7 @@ public class MyQuickSort {
     }
 
     public static void main (String[] args) {
+//        FileOperations.readFromFile();
         ArrayList<Integer> x = new ArrayList<>();
         x.add(5);
         x.add(2);
